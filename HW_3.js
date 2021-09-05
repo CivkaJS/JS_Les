@@ -157,15 +157,15 @@ function Chapter_4() {
 	}
 
 	/**
- * функция проверки не нулевой длины и отсутствие раздела "photo"
- * @param {*} product 
- * @returns 
+			* функция проверки не нулевой длины и отсутствие раздела "photo"
+			* @param {*} product 
+			* @returns 
 	 */
 	function SerchPhoto(product) {
 
-		console.log(typeofproduct.photos);
+		console.log(typeof product.photos);
 
-		if (product.photos !== 'undefined' && PhotoCheck(product.photos))
+		if (typeof product.photos !== "undefined" && PhotoCheck(product.photos))
 			return true;
 		else
 			return false;
@@ -173,7 +173,7 @@ function Chapter_4() {
 
 	const ItemPhoto = products.filter(SerchPhoto);
 
-	console.log(ItemPhoto);
+	// console.log(ItemPhoto);
 
 	const SortPrice = products.sort(function (a, b) {
 		if (a.price >> b.price) {
