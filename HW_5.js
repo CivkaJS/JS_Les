@@ -368,7 +368,102 @@ function Part_3() {
 	Chapter_3_7();
 }
 
+/**
+ *  4 обработка событий
+ */
+function Part_4() {
+	console.log("Part_4");
+
+	/**
+	* Задание. Отследите когда все теги будут добавлены на страницу (событие
+	* DOMContentLoaded) и выведите alert'ом сообщение: "все теги добавлены на страницу"..
+	* @returns {void}
+	*/
+	function Chapter_4_1() {
+
+		console.log("Chapter_1");
+		console.log(`\n`);
+
+		document.addEventListener("DOMContentLoaded", function () {
+			alert('Все теги добавлены на страницу')
+		})
+
+		console.log(`\n`);
+	}
+
+	/**
+	* Задание. Дождитесь когда все картинки загрузятся (событие load) и
+	* покажите с помощью alert сообщение: "все картинки загружены".
+	* @returns {void}
+	*/
+	function Chapter_4_2() {
+
+		console.log("Chapter_2");
+		console.log(`\n`);
+
+		document.querySelector('.chapter_4_2').style.display = 'block';
+
+		window.addEventListener('load', function () {
+			alert('все картинки загружены')
+		})
+
+		document.querySelector('.chapter_4_2').style.display = 'none';
+
+		console.log(`\n`);
+	}
+
+	/**
+	* Задание. Сделайте, чтобы по клику по кнопке с классом .btn появлялся
+	* alert('клик')
+	* @returns {void}
+	*/
+	function Chapter_4_3() {
+
+		console.log("Chapter_3");
+		console.log(`\n`);
+
+		button = document.querySelectorAll('div[class="chapter_4_3"] button');
+
+		for (i = 0; i < button.length; i++) {
+			button[i].addEventListener('click', function () {
+				alert('клик')
+			})
+		}
+
+		console.log(`\n`);
+	}
+
+	/**
+	* Задание. Сделайте, чтобы при наведении на textarea в консоли
+	* появлялось сообщение: "вы навели на textarea"
+	* @returns {void}
+	*/
+	function Chapter_4_4() {
+
+		console.log("Chapter_4");
+		console.log(`\n`);
+
+		let text_area = document.querySelector('div[class="chapter_4_4"] textarea');
+
+		text_area.addEventListener('mouseover', function () {
+			console.log('Вы навели на Textarea');
+		})
+
+		text_area.addEventListener('mouseout', function () {
+			console.log('Вы вышли из поля Textarea');
+		})
+
+
+		console.log(`\n`);
+	}
+
+	Chapter_4_1();
+	Chapter_4_2();
+	Chapter_4_3();
+	Chapter_4_4();
+}
 
 Part_1();
 Part_2();
 Part_3();
+Part_4();
