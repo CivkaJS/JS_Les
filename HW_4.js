@@ -1,4 +1,4 @@
-console.log("Домашка ч.3");
+console.log("Домашка ч.4");
 console.log(`\n`);
 
 'use strict'
