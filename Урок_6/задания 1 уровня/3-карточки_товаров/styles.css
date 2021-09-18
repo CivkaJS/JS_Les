@@ -1,0 +1,15 @@
+.product {
+    width: 200px;
+    padding: 10px;
+    float: left;
+    margin-right: 30px;
+    box-shadow: 0 0 4px black;
+}
+
+.green_background{
+    background-color: darkgreen;
+}
+
+.other_size{
+    font-size: 24px;
+}
