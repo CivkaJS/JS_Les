@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button>Показать сообщение</button>
+    <div class="message">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aliquam enim voluptates quibusdam
+        perferendis sint ipsa, nulla quas doloribus nobis libero voluptatem unde inventore. Ut quas corporis fugit error
+        explicabo? Ipsa quos qui similique sequi officia quod ab reiciendis alias!
+    </div>
+
+    <!-- 
+    Задание. Вам нужно чтобы при клике на кнопку появлялось сообщение .message
+    снизу экрана, в общем как сообщения вконтакте.
+    1. Аудио воспроизводите как здесь https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
+    2. Чтобы получить высоту .message, используйте свойство clientHeight
+    3. Чтобы анимировать перемещение .message используйте стиль transform
+    как здесь https://webref.ru/css/value/translatey
+    -->
+
+    <script>
+        'use strict'
+
+        let button = document.querySelector('button');
+        let object = document.querySelector('.message');
+        let audio_mes = new Audio('notification.mp3');
+
+        button.addEventListener('click', () => {
+            openMessage();
+        });
+
+        function openMessage() {
+            // object.classList.add('active');
+            // object.style.top = 'unset';
+            // object.style.bottom = '2vh';
+            object.style.top = `calc(98vh - ${object.clientHeight}px)`;
+            object.style.right = '2vh';
+            audio_mes.play();
+        }
+
+    </script>
+</body>
+
+</html>
